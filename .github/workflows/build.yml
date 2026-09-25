@@ -1,0 +1,22 @@
+name: Build Mura DVW Companion module
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: yarn
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn package
+      - uses: actions/upload-artifact@v6
+        with:
+          name: matrox-mura-dvw-module
+          path: '*.tgz'
+          if-no-files-found: error
