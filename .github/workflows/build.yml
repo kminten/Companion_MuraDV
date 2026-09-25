@@ -27,9 +27,8 @@ jobs:
           node --version
           which yarn
           yarn --version
-
- - name: Install dependencies
-  run: yarn install --no-immutable
+     - name: Install dependencies
+      run: yarn install --no-immutable
 
       - name: Build module
         run: yarn package
