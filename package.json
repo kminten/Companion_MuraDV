@@ -1,0 +1,12 @@
+{
+  "name": "companion-module-matrox-mura-dvw",
+  "version": "0.2.1",
+  "description": "Bitfocus Companion module for Matrox Mura DVW via Telnet",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "packageManager": "yarn@4.12.0",
+  "engines": {"node": ">=22"},
+  "scripts": {"build": "tsc -p tsconfig.build.json", "package": "yarn build && companion-module-tools package"},
+  "dependencies": {"@companion-module/base": "^2.0.0"},
+  "devDependencies": {"@companion-module/tools": "^3.1.0", "typescript": "^5.8.0"}
+}

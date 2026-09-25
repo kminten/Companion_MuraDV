@@ -1,0 +1,10 @@
+{
+  "id": "matrox-mura-dvw",
+  "name": "Matrox Mura DVW",
+  "shortname": "Mura DVW",
+  "version": "0.2.1",
+  "description": "Control a Matrox Mura DVW over its Telnet Network API.",
+  "type": "connection",
+  "runtime": {"type": "node22", "api": "0.0.0"},
+  "entrypoint": "../dist/index.js"
+}
